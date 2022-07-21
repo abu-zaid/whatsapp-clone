@@ -1,0 +1,15 @@
+.app {
+  background-color: #dadbd3;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.app__body {
+  background-color: whitesmoke;
+  height: 90vh;
+  margin-top: -4vh;
+  width: 90vw;
+  box-shadow: 2px 5px 15px #c8c7c7cf;
+  border-radius: 5px;
+}
