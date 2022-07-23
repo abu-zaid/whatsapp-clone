@@ -1,0 +1,45 @@
+.sidebarChat {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebarChat__items {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 0 5px 0 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  align-items: center;
+  border-radius: 20px;
+  transition: ease-in-out 100ms;
+}
+.sidebarChat__itemsDark {
+  color: rgb(232, 232, 232);
+}
+
+.sidebarChat__itemsDark:hover {
+  background-color: rgb(69, 112, 77) !important;
+}
+.sidebarChat__items:hover {
+  background-color: rgb(231, 231, 231);
+}
+
+.sidebarChat__items_user {
+  border-bottom: 1px solid #e1e1e1;
+
+  display: flex;
+  flex-direction: column;
+  flex: 0.8;
+  padding: 10px;
+}
+
+.sidebarChat__items_userDark {
+  border-bottom: 1px solid #1b4b21 !important;
+}
+.sidebarChat__items_user > p {
+  font-size: small;
+}

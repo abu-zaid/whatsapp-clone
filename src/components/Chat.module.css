@@ -1,0 +1,143 @@
+.chat {
+  flex: 0.7;
+  display: flex;
+  flex-direction: column;
+}
+/* .chatDark {
+  background-color: #45634d;
+} */
+
+.chat__header {
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(238, 238, 238);
+  border-radius: 10px;
+}
+
+.chat__headerDark {
+  background-color: rgb(92, 127, 99);
+  color: #fff;
+}
+
+.chat__header_info {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.chat__header_infoDark > p {
+  color: rgb(255, 255, 255) !important;
+}
+
+.chat__header_info > h3 {
+  font-weight: 500;
+}
+.chat__header_info > p {
+  color: rgb(108, 108, 108);
+  font-size: small;
+}
+
+.chat__header_right {
+  display: flex;
+  min-width: 100px;
+  justify-content: space-between;
+}
+
+.chat__body {
+  flex: 1;
+  background-size: cover;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 20px;
+  background-image: url("https://wallpapercave.com/wp/wp4892377.jpg");
+  background-position: center;
+  background-repeat: repeat;
+  overflow: scroll;
+  padding: 30px;
+}
+
+.chat__body::-webkit-scrollbar {
+  display: none;
+}
+
+.chat__text {
+  margin-bottom: 10px;
+  background-color: rgb(235, 255, 235);
+  width: fit-content;
+  padding: 8px;
+  max-width: 70%;
+  border-radius: 8px;
+}
+
+.chat__textDark {
+  background-color: rgb(109, 160, 112);
+  color: whitesmoke;
+}
+.chat__sender {
+  font-weight: 700;
+  font-size: 0.6rem;
+}
+
+.chat__message {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.chat__time {
+  font-weight: 500;
+  padding-top: 2px;
+  font-size: x-small;
+  text-align: end;
+}
+
+.chat__receiver {
+  margin-left: auto;
+  background-color: rgb(163, 255, 193);
+}
+
+.chat__receiverDark {
+  color: whitesmoke;
+  background-color: rgb(43, 121, 64);
+}
+
+.chat__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3px 10px 3px 10px;
+}
+
+.chat__footer > form {
+  padding: 10px;
+  flex: 1;
+  display: flex;
+}
+
+.chat__footer > form > input {
+  padding: 0px 10px 0px 10px;
+  flex: 1;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+}
+.chat__footer > form > input {
+  padding: 0px 10px 0px 10px;
+  flex: 1;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+}
+.chat__footerDark > form > input {
+  color: whitesmoke;
+}
+
+.chat__footerDark > form > input {
+  background-color: rgb(144, 177, 151);
+}
+
+.chat__footerDark > form > input::placeholder {
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+}

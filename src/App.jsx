@@ -1,13 +1,38 @@
+import { useState } from "react";
+import { useSelector } from "react-redux";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import styles from "./App.module.css";
+import Chat from "./components/Chat";
+import Login from "./components/Login";
 import Sidebar from "./components/Sidebar";
+import DarkThemeContext from "./context/DarkThemeContext";
 
 function App() {
+  const [darkTheme, setDarkTheme] = useState(false);
+  const [user, setUser] = useState(null);
+  const state = useSelector((state) => state);
+
   return (
-    <div className={styles.app}>
-      <div className={styles.app__body}>
-        <Sidebar />
-      </div>
-    </div>
+    <DarkThemeContext.Provider value={{ darkTheme, setDarkTheme }}>
+      <Router>
+        <div className={`${styles.app} ${darkTheme && styles.appDark}`}>
+          {!state.user ? (
+            <Login />
+          ) : (
+            <div
+              className={`${styles.app__body} ${
+                darkTheme && styles.app__bodyDark
+              }`}
+            >
+              <Sidebar />
+              <Routes>
+                <Route path="/rooms/:roomId" element={<Chat />} />
+              </Routes>
+            </div>
+          )}
+        </div>
+      </Router>
+    </DarkThemeContext.Provider>
   );
 }
 

@@ -6,10 +6,20 @@
 }
 
 .app__body {
+  display: flex;
   background-color: whitesmoke;
   height: 90vh;
   margin-top: -4vh;
   width: 90vw;
   box-shadow: 2px 5px 15px #c8c7c7cf;
   border-radius: 5px;
+}
+
+.appDark {
+  background-color: #7ab088;
+}
+
+.app__bodyDark {
+  background-color: #45634d;
+  box-shadow: 2px 5px 15px #98b99fcf;
 }
