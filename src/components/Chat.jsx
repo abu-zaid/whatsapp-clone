@@ -31,7 +31,6 @@ const Chat = () => {
 
   const sendMessage = (event) => {
     event.preventDefault();
-    console.log("you typed", inputMessage);
     if (inputMessage.length > 1) {
       db.collection("rooms").doc(roomId).collection("messages").add({
         message: inputMessage,
@@ -107,6 +106,7 @@ const Chat = () => {
       >
         {messages.map((message) => (
           <div
+            key={roomId}
             className={`${styles.chat__text} ${
               darkTheme && styles.chat__textDark
             } ${darkTheme && styles.chat__receiverDark} ${

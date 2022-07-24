@@ -12,7 +12,6 @@ const Login = () => {
     auth
       .signInWithPopup(provider)
       .then((result) => {
-        console.log(result.user);
         dispatch(getUser(result.user));
       })
       .catch((error) => alert(error.message));

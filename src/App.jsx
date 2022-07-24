@@ -24,9 +24,17 @@ function App() {
                 darkTheme && styles.app__bodyDark
               }`}
             >
-              <Sidebar />
               <Routes>
-                <Route path="/rooms/:roomId" element={<Chat />} />
+                <Route path="/" element={<Sidebar />} />
+                <Route
+                  path="/rooms/:roomId"
+                  element={
+                    <>
+                      <Sidebar />
+                      <Chat />
+                    </>
+                  }
+                />
               </Routes>
             </div>
           )}

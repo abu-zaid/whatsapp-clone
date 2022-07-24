@@ -13,7 +13,7 @@ const SidebarChat = ({ id, name, chatName }) => {
   const [lastMessage, setLastMessage] = useState([]);
   useEffect(() => {
     if (id) {
-      db.collection("users")
+      db.collection("rooms")
         .doc(id)
         .collection("messages")
         .orderBy("timestamp", "desc")
