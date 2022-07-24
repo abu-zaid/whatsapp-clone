@@ -15,7 +15,6 @@ const Login = () => {
         console.log(result.user);
         dispatch(getUser(result.user));
       })
-      .then(console.log(state.user))
       .catch((error) => alert(error.message));
   };
   return (

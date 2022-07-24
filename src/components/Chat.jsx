@@ -29,11 +29,6 @@ const Chat = () => {
   const { roomId } = useParams();
   var iconsColor = darkTheme ? "whitesmoke" : "grey";
 
-  //   useEffect(() => {
-  //     if (id) {
-  //       db.collection("rooms").doc(roomId);
-  //     }
-  //   }, [id]);
   const sendMessage = (event) => {
     event.preventDefault();
     console.log("you typed", inputMessage);
@@ -41,7 +36,7 @@ const Chat = () => {
       db.collection("rooms").doc(roomId).collection("messages").add({
         message: inputMessage,
         id: state.user.uid,
-        name: state.user.displayName,
+        // name: state.user.displayName,
         timestamp: firebase.firestore.FieldValue.serverTimestamp(),
       });
       setInputMessage("");
