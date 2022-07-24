@@ -106,7 +106,7 @@ const Chat = () => {
       >
         {messages.map((message) => (
           <div
-            key={roomId}
+            // key={roomId}
             className={`${styles.chat__text} ${
               darkTheme && styles.chat__textDark
             } ${darkTheme && styles.chat__receiverDark} ${
