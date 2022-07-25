@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
-
+import { useNavigate } from "react-router-dom";
 import "firebase/compat/firestore";
 import styles from "./Chat.module.css";
 import IconButton from "@mui/material/IconButton";
@@ -17,8 +17,10 @@ import { useParams } from "react-router-dom";
 import db from "../configs/firebase";
 import { color } from "@mui/system";
 import { useSelector } from "react-redux";
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 
 const Chat = () => {
+  let navigate = useNavigate();
   const { darkTheme } = useContext(DarkThemeContext);
   const [seed, setSeed] = useState("");
   const state = useSelector((state) => state);
@@ -69,6 +71,12 @@ const Chat = () => {
           darkTheme && styles.chat__headerDark
         }`}
       >
+        <IconButton
+          className={styles.chat__headerBack}
+          onClick={() => navigate(-1)}
+        >
+          <ChevronLeftIcon style={{ color: iconsColor }} />
+        </IconButton>
         <Avatar
           src={`https://avatars.dicebear.com/api/miniavs/${seed}.svg?scale=90`}
         />

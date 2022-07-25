@@ -24,3 +24,24 @@
   margin-top: 20px;
   text-transform: inherit !important;
 }
+
+@media only screen and (max-width: 650px) {
+  .login {
+    display: grid;
+    place-items: center;
+  }
+  .login__container {
+    background-color: whitesmoke;
+    border-radius: 10px;
+    text-align: center;
+    width: 100px;
+  }
+  .login__container > img {
+    width: 100px;
+    object-fit: contain;
+  }
+
+  .login__container > h1 {
+    font-size: small;
+  }
+}

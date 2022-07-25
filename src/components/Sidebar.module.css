@@ -6,7 +6,11 @@
 /* .sidebarDark {
   background-color: #45634d;
 } */
-
+@media only screen and (max-width: 600px) {
+  .sidebar {
+    flex: 1;
+  }
+}
 .sidebar__header {
   padding-left: 20px;
   padding-top: 20px;
