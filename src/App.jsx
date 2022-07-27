@@ -3,7 +3,6 @@ import { useSelector } from "react-redux";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import styles from "./App.module.css";
 import Chat from "./components/Chat";
-import { useNavigate } from "react-router-dom";
 
 import Login from "./components/Login";
 import Sidebar from "./components/Sidebar";
@@ -20,6 +19,7 @@ function App() {
     window.addEventListener("resize", updateMedia);
     return () => window.removeEventListener("resize", updateMedia);
   });
+  
   const [darkTheme, setDarkTheme] = useState(false);
   const [user, setUser] = useState(null);
   const state = useSelector((state) => state);

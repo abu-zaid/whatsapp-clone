@@ -39,6 +39,7 @@
   .login__container > img {
     width: 100px;
     object-fit: contain;
+    padding: 0;
   }
 
   .login__container > h1 {

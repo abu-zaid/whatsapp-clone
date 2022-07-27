@@ -8,7 +8,7 @@ import DarkThemeContext from "../context/DarkThemeContext";
 const SidebarChat = ({ id, name, chatName }) => {
   const [seed, setSeed] = useState("");
   const { darkTheme, setDarkTheme } = useContext(DarkThemeContext);
-
+  
   const linkColor = darkTheme ? "white" : "grey";
   const [lastMessage, setLastMessage] = useState([]);
   useEffect(() => {

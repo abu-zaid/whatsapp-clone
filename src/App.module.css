@@ -15,8 +15,33 @@
   border-radius: 5px;
 }
 
+@media only screen and (max-width: 600px) {
+  .app {
+    background-color: #dadbd3;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+  }
+  .app__body {
+    display: flex;
+    background-color: whitesmoke;
+    height: 100vh;
+    padding-top: 2vh;
+    box-shadow: none !important;
+    width: 100vw;
+  }
+  .appDark {
+    background-color: #45634d !important;
+  }
+  /*   
+  .app__bodyDark {
+    background-color: #45634d;
+    box-shadow: 2px 5px 15px #98b99fcf;
+  } */
+}
+
 .appDark {
-  background-color: #7ab088;
+  background-color: #83b38f;
 }
 
 .app__bodyDark {

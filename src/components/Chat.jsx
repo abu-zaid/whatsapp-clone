@@ -15,6 +15,7 @@ import DarkThemeContext from "../context/DarkThemeContext";
 import { Avatar } from "@mui/material";
 import { useParams } from "react-router-dom";
 import db from "../configs/firebase";
+import { motion } from "framer-motion";
 import { color } from "@mui/system";
 import { useSelector } from "react-redux";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
@@ -65,7 +66,14 @@ const Chat = () => {
   }, []);
 
   return (
-    <div className={`${styles.chat} ${darkTheme && styles.chatDark}`}>
+    <motion.div
+      layout
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+      className={`${styles.chat} ${darkTheme && styles.chatDark}`}
+    >
       <div
         className={`${styles.chat__header} ${
           darkTheme && styles.chat__headerDark
@@ -73,7 +81,7 @@ const Chat = () => {
       >
         <IconButton
           className={styles.chat__headerBack}
-          onClick={() => navigate(-1)}
+          onClick={() => navigate("/")}
         >
           <ChevronLeftIcon style={{ color: iconsColor }} />
         </IconButton>
@@ -161,7 +169,7 @@ const Chat = () => {
           <MicRoundedIcon style={{ color: iconsColor }} />
         </IconButton>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

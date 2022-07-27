@@ -15,6 +15,7 @@ import { useSelector } from "react-redux";
 const Sidebar = () => {
   const state = useSelector((state) => state);
   const { darkTheme, setDarkTheme } = useContext(DarkThemeContext);
+
   const [rooms, setRooms] = useState([]);
   var iconsColor = darkTheme ? "whitesmoke" : "grey";
 
@@ -31,6 +32,19 @@ const Sidebar = () => {
 
   const [seed, setSeed] = useState("");
   const [nameOfChat, setNameOfChat] = useState("");
+  const [filteredChats, setFilteredChats] = useState("");
+  const [searchChats, setSearchChats] = useState("");
+
+  const searchChatsInput = (event) => {
+    setSearchChats(event.target.value);
+  };
+
+  console.log(searchChats);
+  useEffect(() => {
+    if(searchChats.trim().length == 0){
+      
+    }
+  }, []);
 
   useEffect(() => {
     setSeed(Math.floor(Math.random() * 1000));
@@ -76,7 +90,11 @@ const Sidebar = () => {
         }`}
       >
         <SearchIcon style={{ color: iconsColor }} />
-        <input type="text" className="sidebar__input" />
+        <input
+          type="text"
+          className="sidebar__input"
+          onChange={searchChatsInput}
+        />
       </div>
       <div className={styles.sidebar__chats}>
         {rooms.map((room) => (
