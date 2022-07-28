@@ -123,14 +123,9 @@
   border-radius: 20px;
   outline: none;
   border: none;
+  font-size: 16px;
 }
-.chat__footer > form > input {
-  padding: 0px 10px 0px 10px;
-  flex: 1;
-  border-radius: 20px;
-  outline: none;
-  border: none;
-}
+
 .chat__footerDark > form > input {
   color: whitesmoke;
 }

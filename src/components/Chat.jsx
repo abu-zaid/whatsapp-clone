@@ -159,7 +159,7 @@ const Chat = () => {
             darkTheme && styles.chat__footerDark
           }`}
         >
-          <IconButton onClick={onEmojiIcon}>
+          <IconButton onClick={onEmojiIcon} style={{ cursor: "pointer" }}>
             <EmojiEmotionsIcon style={{ color: iconsColor }} />
           </IconButton>
           {showEmojiPicker && (
